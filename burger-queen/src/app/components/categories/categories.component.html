@@ -1,0 +1,68 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<div class="row">
+			<div class="col-sm">
+				<button class="d-block w-100 rounded" (click) = "onCategories('Menu')">
+					<fa-icon [icon]="faUtensils" style="font-size: 30px"></fa-icon>
+					<h5>Todo</h5>
+				</button>
+			</div>
+			<div class="col-sm">
+				<button class="d-block w-100 rounded" (click) = "onCategories('Hamburguesas')">
+					<fa-icon [icon]="faHamburger"  style="font-size: 30px"></fa-icon>
+					<h5>Hamburguesas</h5>
+				</button>
+			</div>
+			<div class="col-sm">
+				<button class="cd-block w-100 rounded" (click) = "onCategories('Bebidas')">
+					<fa-icon [icon]="faGlassWhiskey"  style="font-size: 30px"></fa-icon>
+					<h5>Bebidas</h5>
+				</button>
+			</div>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<div class="row">
+			<div class="col-sm">
+				<button class="cd-block w-100 rounded" (click) = "onCategories('Complementos')">
+					<img  class="category__img" src="../../assets/icons/icons8-french-fries-96.png" alt="" width="45px">
+					<h5>Complementos</h5>
+				</button>
+				
+			</div>
+			<div class="col-sm">
+				<button  class="d-block w-100 rounded" (click) = "onCategories('Combos')">
+					<img class="category__img"  src="../../assets/icons/icons8-street-food-100.png" alt="" width="45px" >
+					<h5>Combos</h5>
+				</button>
+			</div>
+			<div class="col-sm">
+				<button class="d-block w-100 rounded" (click) = "onCategories('Postres')">
+					<fa-icon [icon]="faIceCream"  style="font-size: 30px"></fa-icon>
+					<h5>Postres</h5>
+				</button>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	  </a>
+  </div>
+
+<section class = "card__container">
+	<div class ="card__product"
+		*ngFor="let product of productCategory" >
+		<img class ="card__img" src="{{product.image}}" alt="">
+		<h1>{{product.name}}</h1>
+		<p>{{product.price}}</p>
+	</div>
+  </section>
+
+  <h2>{{messagecat}}</h2>

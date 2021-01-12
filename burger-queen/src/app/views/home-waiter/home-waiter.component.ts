@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductI} from '../../models/product.model';
-import { ApiService } from '../../services/api/api.service';
+
+
 
 @Component({
   selector: 'app-home-waiter',
@@ -8,15 +8,12 @@ import { ApiService } from '../../services/api/api.service';
   styleUrls: ['./home-waiter.component.sass']
 })
 export class HomeWaiterComponent implements OnInit {
-  products!: ProductI[];
+
    
-  constructor(private api: ApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    //Aqui obtenemos los productos de la api
-    this.api.getAllProducts().subscribe(data => {
-      this.products=data;
-    })
+  
   }
 
 }
