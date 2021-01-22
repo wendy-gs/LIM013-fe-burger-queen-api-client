@@ -1,5 +1,5 @@
 <app-nav-bar-waiter></app-nav-bar-waiter>
-<div class="d-inline-flex col-3 border border-primary m-3 h-100" *ngFor="let order of ordersList">
+<div class="d-inline-flex col-3 border border-primary m-3 h-100" *ngFor="let order of ordersDeliver">
   <table class= "table" >
     <thead>
       <tr>
@@ -12,10 +12,5 @@
         <td>{{prod.qty}}</td>
       </tr>
     </tbody>
-    <tfoot>
-        <tr>
-            <th class="d-grid gap-2 d-md-block" colspan="2"><button (click)="deliverOrder(order._id, 'delivered')" class="btn btn-primary btn-sm">Entregar</button></th>
-        </tr>
-    </tfoot>
   </table>
 </div>

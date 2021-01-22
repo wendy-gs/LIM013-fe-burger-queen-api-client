@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api/api.service';
 
 
 
@@ -9,11 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeWaiterComponent implements OnInit {
 
-   
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-  
   }
 
 }

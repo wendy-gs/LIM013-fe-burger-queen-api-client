@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center" *ngFor="let product of producstOrder;let indice=index">
+  <img src="{{product.image}}" class="w-25" alt="...">	
+  <div>
+    <h5>{{product.name}}</h5>
+    <button (click)="deduct(indice,product.quantity,product.price)">
+      <fa-icon [icon]="faMinusCircle" style="font-size: 30px"></fa-icon>
+    </button>
+    <label>{{product.quantity}}</label>
+    <button (click)="add(indice,product.quantity,product.price)">
+      <fa-icon [icon]="faPlusCircle" style="font-size: 30px"></fa-icon>
+    </button>
+  </div>
+  <h5>{{product.priceTotal}}</h5>
+  <a (click)="deleteProductOrder(indice)"><fa-icon [icon]="faTrash" style="font-size: 30px"></fa-icon></a>
+</div>
+<h6>{{total}}</h6>

@@ -1,4 +1,4 @@
-<div>
+<div class="sticky-top">
 	<nav class="nav-color">
 		<ul class="nav d-flex justify-content-between"> 
 			<div class= "d-flex p-2">
@@ -8,8 +8,18 @@
 					</a>
 				</li>
 				<li class="nav-item">
+					<a routerLink= "/kitchen"class="nav-link text-white fs-5" routerLinkActive="active">
+						<fa-icon [icon] = "faClipboardList " class="m-2"></fa-icon>Cocina
+					</a>
+				</li>
+				<li class="nav-item">
 					<a routerLink= "/orders"class="nav-link text-white fs-5" routerLinkActive="active">
-						<fa-icon [icon] = "faClipboardList " class="m-2"></fa-icon>Ordenes
+						<fa-icon [icon] = "faClipboardList " class="m-2"></fa-icon>Por entregar
+					</a>
+				</li>
+				<li class="nav-item">
+					<a routerLink= "/history"class="nav-link text-white fs-5" routerLinkActive="active">
+						<fa-icon [icon] = "faClipboardList " class="m-2"></fa-icon>Historial
 					</a>
 				</li>
 			</div>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/views/orders/orders.component.sass"
+    ],
+    "names": [],
+    "file": "orders.component.css"
+}

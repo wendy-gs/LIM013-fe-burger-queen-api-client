@@ -15,5 +15,6 @@ export class NavBarWaiterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

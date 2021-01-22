@@ -15,8 +15,6 @@ export class CategoriesComponent implements OnInit {
   faGlassWhiskey = faGlassWhiskey;
   faIceCream = faIceCream;
 
-  messagecat!: string;
-
   products!: ProductI[];
   productCategory!: ProductI[];
 
@@ -26,8 +24,12 @@ export class CategoriesComponent implements OnInit {
       //Aqui obtenemos los productos de la api
       this.api.getAllProducts().subscribe(data => {
         this.products=data;
+        this .productCategory = this.products;
       })
-      this.data.currentMessage.subscribe(message => (this.messagecat = message));
+
+      //Servicio de pasar data entre componentes
+     // this.data.currentProduct.subscribe(product => (this.name = product.name));
+
   }
   onCategories(category: string){
     if(category ==="Menu"){
@@ -35,5 +37,8 @@ export class CategoriesComponent implements OnInit {
     } else {
      this.productCategory = this.products.filter(item => category === item.type);
     }
+  }
+  selectProduct(product:ProductI){
+    this.data.addProduct(product);
   }
 }

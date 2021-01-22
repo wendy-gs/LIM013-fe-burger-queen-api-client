@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide mb-5" >
 	<div class="carousel-inner">
 	  <div class="carousel-item active">
 		<div class="row">
@@ -56,13 +56,21 @@
 	  </a>
   </div>
 
-<section class = "card__container">
-	<div class ="card__product"
-		*ngFor="let product of productCategory" >
-		<img class ="card__img" src="{{product.image}}" alt="">
-		<h1>{{product.name}}</h1>
-		<p>{{product.price}}</p>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+	<div class="col card-prod" *ngFor="let product of productCategory">
+	  <div class="card h-100">
+		<div class="border d-flex justify-content-center">
+			<img src="{{product.image}}" class="card-img-bottom"  height="180px" alt="...">	
+		</div>
+		<div class="card-body">
+			<div class="h-75">
+		  		<h5 class="card-title text-wrap text-center">{{product.name}}</h5>
+		 		<p class="card-text text-center">{{product.price}}</p>
+			</div>
+			<div class="d-grid gap-2">
+		 		<button (click)="selectProduct(product)" class="btn btn-success">Añadir</button>
+			</div>
+		</div>
+	  </div>
 	</div>
-  </section>
-
-  <h2>{{messagecat}}</h2>
+  </div>
