@@ -7,6 +7,11 @@ import { KitchenComponent } from './views/kitchen/kitchen.component';
 import { OrderHistoryComponent } from './views/order-history/order-history.component'
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  {
    path: 'home-waiter',
    component: HomeWaiterComponent
   },
