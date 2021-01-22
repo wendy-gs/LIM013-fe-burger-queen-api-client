@@ -1,16 +1,19 @@
-<div class="d-flex align-items-center" *ngFor="let product of producstOrder;let indice=index">
-  <img src="{{product.image}}" class="w-25" alt="...">	
+<div class="h-100 d-flex justify-content-center m-2" *ngFor="let product of producstOrder;let indice=index">
+  <img src="{{product.image}}" class="w-25 border border-warning border-2 rounded" alt="...">	
   <div>
-    <h5>{{product.name}}</h5>
-    <button (click)="deduct(indice,product.quantity,product.price)">
+    <h5 class="card-title text-center text-wrap">{{product.name}}</h5>
+    <div class="d-flex justify-content-between">
+    <button class="btn btn-link d-flex justify-content-start" (click)="deduct(indice,product.quantity,product.price)">
       <fa-icon [icon]="faMinusCircle" style="font-size: 30px"></fa-icon>
     </button>
-    <label>{{product.quantity}}</label>
-    <button (click)="add(indice,product.quantity,product.price)">
+    {{product.quantity}}
+    <button class="btn btn-link" (click)="add(indice,product.quantity,product.price)">
       <fa-icon [icon]="faPlusCircle" style="font-size: 30px"></fa-icon>
     </button>
-  </div>
-  <h5>{{product.priceTotal}}</h5>
-  <a (click)="deleteProductOrder(indice)"><fa-icon [icon]="faTrash" style="font-size: 30px"></fa-icon></a>
+  {{product.priceTotal}}
+  <button class="btn btn-link h-100 d-flex align-items-center justify-content-end" (click)="deleteProductOrder(indice)">
+    <fa-icon [icon]="faTrash" style="font-size: 35px"></fa-icon>
+  </button>
 </div>
-<h6>{{total}}</h6>
+</div>
+</div>

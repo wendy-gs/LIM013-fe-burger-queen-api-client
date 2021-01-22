@@ -15,6 +15,7 @@ export class OrderComponent implements OnInit {
   producstOrder : OrderProductI[]=[];
   order={};
   client:string ="";
+  total:number=0
   
   OrderForm = new FormGroup({
     client: new FormControl('', Validators.required),
@@ -47,4 +48,10 @@ export class OrderComponent implements OnInit {
     this.producstOrder = [];
     this.data.resetOrders();
   }
+  totalAmount(){
+   // Calculate total
+   this.total = this.producstOrder.reduce((acc,obj,) => 
+   acc + (obj.priceTotal),0);
+   return this.total.toFixed(2);
+}
 }

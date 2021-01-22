@@ -10,10 +10,16 @@ export class NavBarWaiterComponent implements OnInit {
 	faHome = faHome;
   faClipboardList = faClipboardList;
   faSignOutAlt = faSignOutAlt;
+  user:any =sessionStorage.getItem("email");
 
 	constructor() { }
 
   ngOnInit(): void {
+  }
+  exit(){
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("id");
+    sessionStorage.removeItem("email");
   }
   
 

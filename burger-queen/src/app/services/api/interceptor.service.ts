@@ -16,7 +16,6 @@ export class InterceptorService implements HttpInterceptor {
         headers
       });
     }
-    console.log('paso interceptor');
     return next.handle(reqClone);
     
   }
