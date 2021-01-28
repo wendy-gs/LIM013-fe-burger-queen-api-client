@@ -25,6 +25,7 @@ export class CategoriesComponent implements OnInit {
       this.api.getAllProducts().subscribe(data => {
         this.products=data;
         this .productCategory = this.products;
+        console.log(this.productCategory);
       })
 
       //Servicio de pasar data entre componentes
