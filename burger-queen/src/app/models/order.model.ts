@@ -10,5 +10,7 @@ export interface OrderI {
     ],
     status: string,
     dateEntry: Date,
-    dateProcessed: Date
+    dateProcessed: Date,
+    min?:any,
+    seg?:any
 }

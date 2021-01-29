@@ -5,6 +5,9 @@
         <div class = "order-title border">
           <h5 class="card-title">Cliente: {{order.client}} </h5>
           <h5 class="card-title">Fecha: {{order.dateEntry| date: 'short'}} </h5>
+          <p class = "timer">
+            <span></span>{{order.min}}:<span>{{order.seg}}</span>
+          </p>
         </div>
         <div *ngFor="let prod of order.products" class="order-body card-body d-flex justify-content-between border border-2">
           <h6 class="card-title">{{prod.product.name}}</h6>

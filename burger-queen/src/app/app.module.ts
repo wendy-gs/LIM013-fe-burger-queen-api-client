@@ -17,6 +17,7 @@ import { OrdersProductComponent } from './components/orders-product/orders-produ
 import { KitchenComponent } from './views/kitchen/kitchen.component';
 import { InterceptorService } from './services/api/interceptor.service';
 import { OrderHistoryComponent } from './views/order-history/order-history.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OrderHistoryComponent } from './views/order-history/order-history.compo
     OrderComponent,
     OrdersProductComponent,
     KitchenComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

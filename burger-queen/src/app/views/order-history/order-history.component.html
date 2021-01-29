@@ -1,14 +1,26 @@
 <app-nav-bar-waiter></app-nav-bar-waiter>
-  <div class="row row-cols-1 row-cols-md-4 g-4 mt-4 mx-3">
-    <div class="col" *ngFor="let order of ordersDeliver">
-      <div class="card h-100">
-        <div class = "order-title border">
-          <h5 class="card-title">Cliente: {{order.client}} </h5>
-          <h5 class="card-title">Fecha: {{order.dateEntry| date: 'short'}} </h5>
-        </div>
-        <div *ngFor="let prod of order.products" class="order-body card-body d-flex justify-content-between border border-2">
-          <h6 class="card-title">{{prod.product.name}}</h6>
-          <h6 class="card-text">X{{prod.qty}}</h6>
-        </div>
-      </div>
-    </div> 
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Productos</th>
+          <th scope="col">Detalle</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let order of ordersDeliver;index as i">
+        <tr>
+          <th scope="row">{{i}}</th>
+          <td>{{order.client}}</td>
+          <td>
+            <div *ngFor="let prod of order.products" class="order-body  d-flex justify-content-start">
+              <h6>{{prod.product.name}}</h6>
+              <h6 class="ms-3">X{{prod.qty}}</h6>
+            </div>
+          </td>
+          <td>{{order.dateEntry| date: 'short'}}</td>
+        </tr>
+      </tbody>
+    </table>
+   
+
