@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome, faClipboardList, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faClipboardList, faSignOutAlt, faUtensilSpoon, faUserClock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar-waiter',
@@ -10,6 +10,8 @@ export class NavBarWaiterComponent implements OnInit {
 	faHome = faHome;
   faClipboardList = faClipboardList;
   faSignOutAlt = faSignOutAlt;
+  faUtensilSpoon = faUtensilSpoon;
+  faUserClck = faUserClock;
   user:any =sessionStorage.getItem("email");
 
 	constructor() { }
